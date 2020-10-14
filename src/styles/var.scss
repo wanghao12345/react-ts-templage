@@ -1,0 +1,8 @@
+// 颜色
+$red: red;
+// 样式
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
