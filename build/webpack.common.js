@@ -1,14 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// 打包进度条
+const WebpackBar = require('webpackbar');
 
-/**
- * webpack 环境变量
- */
-const webpackEnv = {
-    isEnvDevelopment: process.env.NODE_ENV === 'development',
-    isEnvProduction: process.env.NODE_ENV === 'production'
-};
+import { webpackEnv } from './config'
 
 
 module.exports = {
@@ -39,6 +35,7 @@ module.exports = {
         }]
     },
     plugins: [
+        new WebpackBar(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'public/index.html',
