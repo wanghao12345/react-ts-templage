@@ -1,11 +1,11 @@
 @import './styles/var.scss';
 
 .app-wrapper{
-    width: 50px;
+    width: 55px;
     background-color: $red;
     color: white;
     display: block;
     @include ellipsis;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
