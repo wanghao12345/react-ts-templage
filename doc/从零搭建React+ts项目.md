@@ -609,11 +609,106 @@ $red: red;
 }
 ```
 
+### 九、引入eslint
 
+```javascript
+yarn add eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
+```
 
+在根目录下新建.eslintrc.js，并写入配置：
 
+```javascript
+module.exports = {
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  parserOptions: {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  env: {
+    node: true,
+    browser: true,
+    commonjs: true,
+    es6: true
+  },
+  parser: '@typescript-eslint/parser',
+  plugins: [
+    "@typescript-eslint",
+    "react-hooks"
+  ],
+  globals: {
+    // 这里填入你的项目需要的全局变量
+    // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
+    // React: false,
+    // ReactDOM: false
+  },
+  settings: {
+    react: {
+        pragma: "React",
+        version: "detect"
+    }
+  },
+  rules: {
+    // 这里填入你的项目需要的个性化配置，比如：
+    //
+    // // @fixable 一个缩进必须用两个空格替代
+    semi: ['error', 'never'],
+    'no-console': 'off',
+    'no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        args: 'none',
+        caughtErrors: 'none'
+      }
+    ],
+    'max-nested-callbacks': 'off',
+    'react/no-children-prop': 'off',
+    'typescript/member-ordering': 'off',
+    'typescript/member-delimiter-style': 'off',
+    'react/jsx-indent-props': 'off',
+    'react/no-did-update-set-state': 'off',
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    indent: [
+      'off',
+      2,
+      {
+        SwitchCase: 1,
+        flatTernaryExpressions: true
+      }
+    ]
+  }
+}
+```
 
+用 VS Code 开发时，应该还需要配置settings.json
 
+```json
+"eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        },
+    ]
+```
 
 
 

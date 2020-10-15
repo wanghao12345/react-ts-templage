@@ -1,4 +1,9 @@
-import * as React from 'react'
+import * as React from 'react';
+import { Button } from 'antd';
+import {
+    QuestionOutlined
+  } from '@ant-design/icons';
+
 
 interface IProps {
 
@@ -19,7 +24,12 @@ class App extends React.Component<IProps, IState> {
     render() {
         const { text } = this.state
         return (
-            <div className="app-wrapper">{text}</div>
+            <div>
+                <div className="app-wrapper">{text}</div>
+                <Button type="primary">Primary Button</Button>
+                <QuestionOutlined />
+            </div>
+
         )
     }
 }
