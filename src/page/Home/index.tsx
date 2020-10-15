@@ -14,8 +14,7 @@ class Home extends React.Component<IProps, IState> {
 
     render() {
         return (
-            <div>Home</div>
-
+            <div className="home-wrapper">Home</div>
         )
     }
 }

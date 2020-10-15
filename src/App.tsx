@@ -26,9 +26,6 @@ class App extends React.Component<IProps, IState> {
         const { text } = this.state
         return (
             <div>
-                <div className="app-wrapper">{text}</div>
-                <Button type="primary">Primary Button</Button>
-                <QuestionOutlined />
                 <Router />
             </div>
 
