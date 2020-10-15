@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Router from '@src/router'
 import { Button } from 'antd';
 import {
     QuestionOutlined
@@ -28,6 +29,7 @@ class App extends React.Component<IProps, IState> {
                 <div className="app-wrapper">{text}</div>
                 <Button type="primary">Primary Button</Button>
                 <QuestionOutlined />
+                <Router />
             </div>
 
         )
