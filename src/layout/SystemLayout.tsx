@@ -21,7 +21,10 @@ class SystemLayout extends React.Component<IProps, IState> {
     render() {
         const { children } = this.props
         return (
-            <Layout>
+            <Layout style={{
+                width: '100%',
+                height: '100%'
+            }}>
                 <Sider>Sider</Sider>
                 <Layout>
                     <Header>Header</Header>

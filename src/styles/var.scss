@@ -6,3 +6,13 @@ $red: red;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+// 文本格式化，超出范围，显示省略号
+@mixin textOverflow($width:100%,$display:block) {
+    width: $width;
+    display: $display;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
