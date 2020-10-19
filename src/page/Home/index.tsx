@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { HomeWrapper } from './style'
+
 interface IProps {
 
 }
@@ -14,7 +16,7 @@ class Home extends React.Component<IProps, IState> {
 
     render() {
         return (
-            <div className="home-wrapper">Home</div>
+            <HomeWrapper>Home</HomeWrapper>
         )
     }
 }

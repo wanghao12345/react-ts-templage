@@ -25,10 +25,7 @@ class App extends React.Component<IProps, IState> {
     render() {
         const { text } = this.state
         return (
-            <div>
-                <Router />
-            </div>
-
+            <Router />
         )
     }
 }
